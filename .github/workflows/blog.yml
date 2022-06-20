@@ -1,38 +1,43 @@
-# action 的名称
-name: Deploy GitHub Pages
+# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-# 触发条件：在 push 到 main 分支后
+name: Node.js CI
+# on 表示触发actions的条件
 on:
-  push:
-    branches:
-      - main
+  push: 
+    branches: [ main ]  #main分支在push的时候会触发
+  pull_request:
+    branches: [ main ] #main分支在PR的时候会触发
 
-# 任务
 jobs:
-  build-and-deploy:
-    # 服务器环境：最新版 Ubuntu
-    runs-on: ubuntu-latest
+  build:
+
+    runs-on: ubuntu-latest #nodejs执行的操作系统
+
+    strategy:
+      matrix:
+        node-version: [14.x] #选择你需要的nodejs版本
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
-      # 拉取代码
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-
-      # 生成静态文件
-      - name: Build
-        run: npm install && npm run docs:build
-
-      # 部署到 GitHub Pages
-      - name: Deploy
-        # 使用别人写好的一个 action
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          # 这里的 ACCESS_TOKEN 名字需要和下文中的相对应
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          # 打包后的文件部署到哪个分支上
-          BRANCH: gh-pages
-          # 打包后的文件在哪里
-          FOLDER: docs/.vuepress/dist
+    - uses: actions/checkout@v2 #拉取你的最新代码
+    - name: 使用 Node.js ${{ matrix.node-version }}开始搞事情
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm install
+    - run: npm run build
+    - name: 自动同步文件夹到我的服务器
+    # You may pin to the exact commit or the version.
+    # uses: wangyucode/sftp-upload-action@24f8bb83383dc39bed201ee5da01475e6c38c568
+      uses: wangyucode/sftp-upload-action@v1.1
+      with:
+        host: ${{ secrets.SERVER_IP }}  #你的nginx服务器公网ip
+        port: ${{ secrets.SERVER_PORT }} #你的nginx服务器ssh端口
+        username: ${{ secrets.USERNAME }} #你的nginx服务器用户名
+        privateKey: ${{ secrets.key }} 
+        # password: ${{ secrets.PASSWORD }} #你的nginx服务器密码
+        localDir: "dist" #你vue项目build好的文件的路径,每次服务器上会自动删除对应的文件夹后重新覆盖
+        remoteDir: ${{ secrets.SERVER_DESTINATION }} #你要把你build好的文件夹放到nginx服务器上的什么位置
 
