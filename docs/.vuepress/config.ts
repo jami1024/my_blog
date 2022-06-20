@@ -12,13 +12,20 @@ export default defineUserConfig({
         {
           text: 'Vue3',
           collapsible: true,
-          children: ['/web/vue3/vue','/web/vue3/vue',],
+          children: ['/web/vue3/vue',],
         },
         {
           text: 'TypeScript',
           collapsible: true,
           children: ['/web/typescript/TypeScript',],
         },
+      ],
+      '/golang/': [
+        {
+          text: '基础',
+          collapsible: true,
+          children: ['/golang/basic/array', '/golang/basic/slice',  '/golang/basic/point','/golang/basic/func','/golang/basic/map','/golang/basic/struct','/golang/basic/copy','/golang/basic/make_and_new'],
+        }
       ],
     },
     // // 默认主题配置
@@ -38,8 +45,8 @@ export default defineUserConfig({
           link: '/python/'
       },
       {
-        text: 'Goland',
-        link: '/goland/'
+        text: 'Golang',
+        link: '/golang/'
     },
       {text: 'Github', link: 'https://github.com/jami1024'},
     ],

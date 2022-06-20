@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.43">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <title>切片 | Jami's Blog</title><meta name="description" content="个人博客">
+    <link rel="modulepreload" href="/assets/app.1f9c46a3.js"><link rel="modulepreload" href="/assets/slice.html.45e559e3.js"><link rel="modulepreload" href="/assets/slice.html.6b477347.js"><link rel="prefetch" href="/assets/index.html.86818c55.js"><link rel="prefetch" href="/assets/django.html.27d7052f.js"><link rel="prefetch" href="/assets/python.html.b357441a.js"><link rel="prefetch" href="/assets/index.html.09e094d6.js"><link rel="prefetch" href="/assets/golang.html.12cd10d1.js"><link rel="prefetch" href="/assets/index.html.0c894e1a.js"><link rel="prefetch" href="/assets/array.html.b456f5ee.js"><link rel="prefetch" href="/assets/copy.html.43a77921.js"><link rel="prefetch" href="/assets/func.html.5dcd9a3e.js"><link rel="prefetch" href="/assets/make_and_new.html.022f31b6.js"><link rel="prefetch" href="/assets/map.html.4ab68646.js"><link rel="prefetch" href="/assets/point.html.78284035.js"><link rel="prefetch" href="/assets/struct.html.d3f467ae.js"><link rel="prefetch" href="/assets/TypeScript.html.009f4367.js"><link rel="prefetch" href="/assets/vue.html.93a11567.js"><link rel="prefetch" href="/assets/404.html.93146c89.js"><link rel="prefetch" href="/assets/index.html.5409c3b2.js"><link rel="prefetch" href="/assets/django.html.dfb53a66.js"><link rel="prefetch" href="/assets/python.html.b7792be2.js"><link rel="prefetch" href="/assets/index.html.5145c9b2.js"><link rel="prefetch" href="/assets/golang.html.085f7978.js"><link rel="prefetch" href="/assets/index.html.dcc12936.js"><link rel="prefetch" href="/assets/array.html.05f639ca.js"><link rel="prefetch" href="/assets/copy.html.5f878fa7.js"><link rel="prefetch" href="/assets/func.html.6f0d83ce.js"><link rel="prefetch" href="/assets/make_and_new.html.dbb6d263.js"><link rel="prefetch" href="/assets/map.html.3f7b2b6b.js"><link rel="prefetch" href="/assets/point.html.83ae2d94.js"><link rel="prefetch" href="/assets/struct.html.0814441d.js"><link rel="prefetch" href="/assets/TypeScript.html.7b4115c1.js"><link rel="prefetch" href="/assets/vue.html.56f5cb9c.js"><link rel="prefetch" href="/assets/404.html.1a1c6c66.js"><link rel="prefetch" href="/assets/404.656555b7.js"><link rel="prefetch" href="/assets/Layout.d1d253ff.js">
+    <link rel="stylesheet" href="/assets/style.6fbaebad.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><!--[--><header class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/" class=""><!----><span class="site-name">Jami&#39;s Blog</span></a></span><div class="navbar-items-wrapper" style=""><!--[--><!--]--><nav class="navbar-items can-hide"><!--[--><div class="navbar-item"><a href="/" class="" aria-label="首页"><!--[--><!--]--> 首页 <!--[--><!--]--></a></div><div class="navbar-item"><a href="/web/" class="" aria-label="前端"><!--[--><!--]--> 前端 <!--[--><!--]--></a></div><div class="navbar-item"><a href="/python/" class="" aria-label="Python"><!--[--><!--]--> Python <!--[--><!--]--></a></div><div class="navbar-item"><a href="/golang/" class="router-link-active" aria-label="Golang"><!--[--><!--]--> Golang <!--[--><!--]--></a></div><div class="navbar-item"><a class="external-link" href="https://github.com/jami1024" rel="noopener noreferrer" target="_blank" aria-label="Github"><!--[--><!--]--> Github <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-dark-button" title="toggle dark mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><form class="search-box" role="search"><input type="search" autocomplete="off" spellcheck="false" value><!----></form></div></header><!--]--><div class="sidebar-mask"></div><!--[--><aside class="sidebar"><nav class="navbar-items"><!--[--><div class="navbar-item"><a href="/" class="" aria-label="首页"><!--[--><!--]--> 首页 <!--[--><!--]--></a></div><div class="navbar-item"><a href="/web/" class="" aria-label="前端"><!--[--><!--]--> 前端 <!--[--><!--]--></a></div><div class="navbar-item"><a href="/python/" class="" aria-label="Python"><!--[--><!--]--> Python <!--[--><!--]--></a></div><div class="navbar-item"><a href="/golang/" class="router-link-active" aria-label="Golang"><!--[--><!--]--> Golang <!--[--><!--]--></a></div><div class="navbar-item"><a class="external-link" href="https://github.com/jami1024" rel="noopener noreferrer" target="_blank" aria-label="Github"><!--[--><!--]--> Github <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-items"><!--[--><li><p tabindex="0" class="sidebar-item sidebar-heading active collapsible">基础 <span class="down arrow"></span></p><!--[--><ul style="" class="sidebar-item-children"><!--[--><li><a href="/golang/basic/array.html" class="sidebar-item" aria-label="数组"><!--[--><!--]--> 数组 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/golang/basic/slice.html" class="router-link-active router-link-exact-active router-link-active sidebar-item active" aria-label="切片"><!--[--><!--]--> 切片 <!--[--><!--]--></a><!--[--><ul style="" class="sidebar-item-children"><!--[--><li><a aria-current="page" href="/golang/basic/slice.html#声明" class="router-link-active router-link-exact-active sidebar-item" aria-label="声明"><!--[--><!--]--> 声明 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/golang/basic/slice.html#遍历" class="router-link-active router-link-exact-active sidebar-item" aria-label="遍历"><!--[--><!--]--> 遍历 <!--[--><!--]--></a><!--[--><ul style="" class="sidebar-item-children"><!--[--><li><a aria-current="page" href="/golang/basic/slice.html#例子" class="router-link-active router-link-exact-active sidebar-item" aria-label="例子"><!--[--><!--]--> 例子 <!--[--><!--]--></a><!----></li><!--]--></ul><!--]--></li><li><a aria-current="page" href="/golang/basic/slice.html#例子-1" class="router-link-active router-link-exact-active sidebar-item" aria-label="例子 1"><!--[--><!--]--> 例子 1 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/golang/basic/slice.html#例子-2" class="router-link-active router-link-exact-active sidebar-item" aria-label="例子 2"><!--[--><!--]--> 例子 2 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/golang/basic/slice.html#例子-3" class="router-link-active router-link-exact-active sidebar-item" aria-label="例子 3"><!--[--><!--]--> 例子 3 <!--[--><!--]--></a><!----></li><!--]--></ul><!--]--></li><li><a href="/golang/basic/point.html" class="sidebar-item" aria-label="指针"><!--[--><!--]--> 指针 <!--[--><!--]--></a><!----></li><li><a href="/golang/basic/func.html" class="sidebar-item" aria-label="函数"><!--[--><!--]--> 函数 <!--[--><!--]--></a><!----></li><li><a href="/golang/basic/map.html" class="sidebar-item" aria-label="map"><!--[--><!--]--> map <!--[--><!--]--></a><!----></li><li><a href="/golang/basic/struct.html" class="sidebar-item" aria-label="结构体"><!--[--><!--]--> 结构体 <!--[--><!--]--></a><!----></li><li><a href="/golang/basic/copy.html" class="sidebar-item" aria-label="深拷贝"><!--[--><!--]--> 深拷贝 <!--[--><!--]--></a><!----></li><li><a href="/golang/basic/make_and_new.html" class="sidebar-item" aria-label="make()和new()的区别"><!--[--><!--]--> make()和new()的区别 <!--[--><!--]--></a><!----></li><!--]--></ul><!--]--></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h1 id="切片" tabindex="-1"><a class="header-anchor" href="#切片" aria-hidden="true">#</a> 切片</h1><p>切片是长度可变的数组(具有相同数据类型的数据项组成的一组长度可变的序列) ,切片由三部分组成:</p><ol><li>指针:指向切片第一个元素指向的数组元素的地址</li><li>长度:切片元素的数量</li><li>容量:切片开始到结束位置元素的数量</li></ol><h2 id="声明" tabindex="-1"><a class="header-anchor" href="#声明" aria-hidden="true">#</a> 声明</h2><p>切片声明需要指定组成元素的类型, 但不需要指定存储元素的数量 (长度) 。 在切片声明后, 会被初始化为 nil,表示暂不存在的切片</p><div class="language-go ext-go line-numbers-mode"><pre class="language-go"><code><span class="token keyword">package</span> slice
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">&quot;fmt&quot;</span>
+	<span class="token string">&quot;testing&quot;</span>
+<span class="token punctuation">)</span>
+
+
+<span class="token keyword">func</span> <span class="token function">TestSliceStatement</span><span class="token punctuation">(</span>t <span class="token operator">*</span>testing<span class="token punctuation">.</span>T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;切片的声明&quot;</span><span class="token punctuation">)</span>
+	<span class="token keyword">var</span> names <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;b&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;c&quot;</span><span class="token punctuation">}</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;names类型:%T,names的值为:%q\n&quot;</span><span class="token punctuation">,</span> names<span class="token punctuation">,</span> names<span class="token punctuation">)</span>
+
+	<span class="token keyword">var</span> namesNil <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span> <span class="token comment">// nil切片</span>
+	<span class="token keyword">var</span> namesBlank <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">//空切片</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;namesNil:%t\nnamesBlank:%t\n&quot;</span><span class="token punctuation">,</span> namesNil <span class="token operator">==</span> <span class="token boolean">nil</span><span class="token punctuation">,</span> namesBlank <span class="token operator">==</span> <span class="token boolean">nil</span><span class="token punctuation">)</span>
+
+
+	<span class="token comment">// 利用make创建切片</span>
+	<span class="token comment">// make(type, len, cap)</span>
+	nameMake <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;nameMake类型:%T\tnameMake的值为:%q\nnameMake的len:%d\tnameMake的cap:%d\n&quot;</span><span class="token punctuation">,</span> nameMake<span class="token punctuation">,</span> nameMake<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>nameMake<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>nameMake<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+	<span class="token comment">// 访问和修改</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;切片的访问&quot;</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;names第一个元素是:%v\n&quot;</span><span class="token punctuation">,</span> names<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;切片的修改&quot;</span><span class="token punctuation">)</span>
+	names<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;0&quot;</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;names:%q\n&quot;</span><span class="token punctuation">,</span> names<span class="token punctuation">)</span>
+
+	<span class="token comment">// 长度,切片中已经存在的元素 len</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;names的长度:%d\n&quot;</span><span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+	name3 <span class="token operator">:=</span> nameMake
+	name3 <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>name3<span class="token punctuation">,</span> <span class="token string">&quot;a&quot;</span><span class="token punctuation">)</span> <span class="token comment">// [&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;aa&quot;]</span>
+	nameMake <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>nameMake<span class="token punctuation">,</span> <span class="token string">&quot;aa&quot;</span><span class="token punctuation">)</span> <span class="token comment">// [&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;aa&quot;]</span>
+	<span class="token comment">// 变量赋值都是复制</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;nameMake的值为:%q\nname3的值%q\n&quot;</span><span class="token punctuation">,</span> nameMake<span class="token punctuation">,</span> name3<span class="token punctuation">)</span>
+	<span class="token comment">// 0 &lt;= start &lt;= end &lt;= cap</span>
+	<span class="token comment">// len = end - start</span>
+	<span class="token comment">// cap = cap - start</span>
+
+	<span class="token comment">// 0 &lt;= start &lt;= end &lt;= cap_end &lt;= cap</span>
+	<span class="token comment">// len = end -start</span>
+	<span class="token comment">// cap = cap_end = start</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>nameMake<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+	<span class="token comment">/*
+
+	=== RUN TestSliceStatement
+
+	切片的声明
+
+	names类型:[]string,names的值为:[&quot;a&quot; &quot;b&quot; &quot;c&quot;]
+
+	namesNil:true
+
+	namesBlank:false
+
+	nameMake类型:[]string nameMake的值为:[&quot;&quot; &quot;&quot; &quot;&quot;]
+
+	nameMake的len:3 nameMake的cap:10
+
+	切片的访问
+
+	names第一个元素是:a
+
+	切片的修改
+
+	names:[&quot;0&quot; &quot;b&quot; &quot;c&quot;]
+
+	names的长度:3
+
+	nameMake的值为:[&quot;&quot; &quot;&quot; &quot;&quot; &quot;aa&quot;]
+
+	name3的值[&quot;&quot; &quot;&quot; &quot;&quot; &quot;aa&quot;]
+
+	[ ]
+
+	--- PASS: TestSliceStatement (0.00s)
+
+	PASS
+
+	ok gonotes/slice 3.044s
+
+	*/</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br></div></div><h2 id="遍历" tabindex="-1"><a class="header-anchor" href="#遍历" aria-hidden="true">#</a> 遍历</h2><p>可通过 for-len 或 for-range 方式对切片中元素进行遍历</p><h3 id="例子" tabindex="-1"><a class="header-anchor" href="#例子" aria-hidden="true">#</a> 例子</h3><div class="language-go ext-go line-numbers-mode"><pre class="language-go"><code><span class="token keyword">package</span> slice
+
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">&quot;fmt&quot;</span>
+	<span class="token string">&quot;testing&quot;</span>
+<span class="token punctuation">)</span>
+
+
+
+<span class="token comment">// 定义切片</span>
+<span class="token keyword">var</span> names <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;b&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;c&quot;</span><span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">TestSliceForLen</span><span class="token punctuation">(</span>t <span class="token operator">*</span>testing<span class="token punctuation">.</span>T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;for len方式遍历切片&quot;</span><span class="token punctuation">)</span>
+	<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token function">len</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;names的索引:%d\t值为%s\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> names<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token comment">/*
+		=== RUN TestSliceForLen
+		for len方式遍历切片
+		names的索引:0 值为a
+		names的索引:1 值为b
+		names的索引:2 值为c
+		--- PASS: TestSliceForLen (0.00s)
+		PASS
+		ok gonotes/slice 0.115s
+	*/</span>
+<span class="token punctuation">}</span>
+
+
+
+<span class="token keyword">func</span> <span class="token function">TestSliceForRange</span><span class="token punctuation">(</span>t <span class="token operator">*</span>testing<span class="token punctuation">.</span>T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;for range方式遍历切片&quot;</span><span class="token punctuation">)</span>
+	<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token keyword">range</span> names <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;names的索引:%d\t值为%s\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> names<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+
+	<span class="token comment">/*
+
+	=== RUN TestSliceForRange
+	for range方式遍历切片
+	names的索引:0 值为a
+	names的索引:1 值为b
+	names的索引:2 值为c
+	--- PASS: TestSliceForRange (0.00s)
+	PASS
+	ok gonotes/slice 0.111s
+	*/</span>
+
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br></div></div><h2 id="例子-1" tabindex="-1"><a class="header-anchor" href="#例子-1" aria-hidden="true">#</a> 例子 1</h2><div class="language-go ext-go line-numbers-mode"><pre class="language-go"><code><span class="token keyword">package</span> slice
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">&quot;fmt&quot;</span>
+	<span class="token string">&quot;testing&quot;</span>
+<span class="token punctuation">)</span>
+
+
+<span class="token keyword">func</span> <span class="token function">TestSliceAppend</span><span class="token punctuation">(</span>t <span class="token operator">*</span>testing<span class="token punctuation">.</span>T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// append新增</span>
+	<span class="token comment">// 定义切片,注意:=这种方式不能定义全局变量</span>
+	names <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;b&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;c&quot;</span><span class="token punctuation">}</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;names:%q\n&quot;</span><span class="token punctuation">,</span> names<span class="token punctuation">)</span>
+	names <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>names<span class="token punctuation">,</span> <span class="token string">&quot;d&quot;</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;names:%q\n&quot;</span><span class="token punctuation">,</span> names<span class="token punctuation">)</span>
+
+
+	<span class="token comment">/*
+	=== RUN TestSliceAppend
+	names:[&quot;a&quot; &quot;b&quot; &quot;c&quot;]
+	names:[&quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;]
+	--- PASS: TestSliceAppend (0.00s)
+	PASS
+	ok gonotes/slice 0.296s
+	*/</span>
+
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h2 id="例子-2" tabindex="-1"><a class="header-anchor" href="#例子-2" aria-hidden="true">#</a> 例子 2</h2><div class="language-go ext-go line-numbers-mode"><pre class="language-go"><code><span class="token keyword">package</span> slice
+
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">&quot;fmt&quot;</span>
+	<span class="token string">&quot;testing&quot;</span>
+<span class="token punctuation">)</span>
+
+
+<span class="token keyword">func</span> <span class="token function">TestSliceCap</span><span class="token punctuation">(</span>t <span class="token operator">*</span>testing<span class="token punctuation">.</span>T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+	<span class="token comment">//cap 切片的容量，表示内存中可以存放的大小,当没有指定cap大小时，默认和长度相同</span>
+	nums <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">}</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;nums的len:%d\tnums的cap:%d\n&quot;</span><span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	nums <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span>
+	<span class="token comment">// cap满时，当增加的元素小于1024，容量就会成倍增加，若大于1024则增加0.25倍</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;nums的len:%d\tnums的cap:%d\n&quot;</span><span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	nums2 <span class="token operator">:=</span> nums<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;nums2的len:%d\tnums2的值:%v\n&quot;</span><span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>nums2<span class="token punctuation">)</span><span class="token punctuation">,</span> nums2<span class="token punctuation">)</span>
+	<span class="token comment">// 修改nums2的值nums中也会变</span>
+	nums2<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">100</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;nums2的值:%v\tnums的值:%v\n&quot;</span><span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> nums<span class="token punctuation">)</span>
+
+	<span class="token comment">/*
+	=== RUN TestSliceCap
+	nums的len:6 nums的cap:6
+	nums的len:7 nums的cap:12
+	nums2的len:2 nums2的值:[2 3]
+	nums2的值:[100 3] nums的值:[1 100 3 4 5 6 7]
+	--- PASS: TestSliceCap (0.00s)
+	PASS
+	ok gonotes/slice 0.241s
+	*/</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><h2 id="例子-3" tabindex="-1"><a class="header-anchor" href="#例子-3" aria-hidden="true">#</a> 例子 3</h2><div class="language-go ext-go line-numbers-mode"><pre class="language-go"><code><span class="token keyword">package</span> slice
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">&quot;fmt&quot;</span>
+	<span class="token string">&quot;testing&quot;</span>
+<span class="token punctuation">)</span>
+
+
+<span class="token keyword">func</span> <span class="token function">TestSliceCopy</span><span class="token punctuation">(</span>t <span class="token operator">*</span>testing<span class="token punctuation">.</span>T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;切片的copy&quot;</span><span class="token punctuation">)</span>
+	n1 <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span>
+	n2 <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">}</span>
+
+	<span class="token comment">//copy(dst, src) src =&gt; dst,如果源比目标多，那么多出来的值并不会copy到目标中</span>
+	<span class="token function">copy</span><span class="token punctuation">(</span>n1<span class="token punctuation">,</span> n2<span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;n1 copy n2 后的结果%v\n&quot;</span><span class="token punctuation">,</span> n1<span class="token punctuation">)</span>
+
+	<span class="token comment">/*
+	=== RUN TestSliceCopy
+	切片的copy
+	n1 copy n2 后的结果[10 11 12 13 14 15]
+	--- PASS: TestSliceCopy (0.00s)
+	PASS
+	ok gonotes/slice (cached)
+	*/</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><!--]--></div><footer class="page-meta"><!----><!----><!----></footer><nav class="page-nav"><p class="inner"><span class="prev"><a href="/golang/basic/array.html" class="" aria-label="数组"><!--[--><!--]--> 数组 <!--[--><!--]--></a></span><span class="next"><a href="/golang/basic/point.html" class="" aria-label="指针"><!--[--><!--]--> 指针 <!--[--><!--]--></a></span></p></nav><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script type="module" src="/assets/app.1f9c46a3.js" defer></script>
+  </body>
+</html>
