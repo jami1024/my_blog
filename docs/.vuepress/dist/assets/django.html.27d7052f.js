@@ -1,1 +1,0 @@
-const a={key:"v-80f2573a",path:"/django/django.html",title:"\u9082\u9005Django",lang:"zh-CN",frontmatter:{sidebar:"auto"},excerpt:"",headers:[],git:{updatedTime:165209875e4,contributors:[{name:"\u59EC\u5EFA\u660E",email:"jijianming@MacBookPro2020.local",commits:1}]},filePathRelative:"django/django.md"};export{a as data};

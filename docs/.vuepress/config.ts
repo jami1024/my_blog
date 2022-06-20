@@ -6,6 +6,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: 'Jami\'s Blog',
   description: '个人博客',
+  dest: './dist',
   theme: defaultTheme({
     sidebar: {
       '/web/': [
