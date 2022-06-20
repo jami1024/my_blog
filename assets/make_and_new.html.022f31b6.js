@@ -1,0 +1,1 @@
+const e={key:"v-436410b1",path:"/golang/basic/make_and_new.html",title:"make()\u548Cnew()\u7684\u533A\u522B",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"golang/basic/make_and_new.md"};export{e as data};

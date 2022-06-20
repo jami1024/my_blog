@@ -1,0 +1,1 @@
+const t={key:"v-148838fa",path:"/python/python.html",title:"\u9082\u9005Python",lang:"zh-CN",frontmatter:{sidebar:"auto"},excerpt:"",headers:[],git:{updatedTime:165209875e4,contributors:[{name:"\u59EC\u5EFA\u660E",email:"jijianming@MacBookPro2020.local",commits:1}]},filePathRelative:"python/python.md"};export{t as data};
