@@ -40,4 +40,5 @@ jobs:
         # password: ${{ secrets.PASSWORD }} #你的nginx服务器密码
         localDir: "dist" #你vue项目build好的文件的路径,每次服务器上会自动删除对应的文件夹后重新覆盖
         remoteDir: ${{ secrets.SERVER_DESTINATION }} #你要把你build好的文件夹放到nginx服务器上的什么位置
+        interactiveAuth: true
 
