@@ -21,6 +21,13 @@ export default defineUserConfig({
           children: ['/web/typescript/TypeScript',],
         },
       ],
+      '/django/': [
+        {
+          text: 'DRF',
+          collapsible: true,
+          children: ['/django/drf/drf',],
+        }
+      ],
       '/golang/': [
         {
           text: '基础',
@@ -39,6 +46,10 @@ export default defineUserConfig({
       {
         text: '前端',
         link: '/web/'
+      },
+      {
+        text: 'Django',
+        link: '/django/'
       },
       // // 后端
       {
