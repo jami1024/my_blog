@@ -25,7 +25,7 @@ export default defineUserConfig({
         {
           text: 'DRF',
           collapsible: true,
-          children: ['/django/drf/drf',],
+          children: ['/django/drf/01',],
         }
       ],
       '/golang/': [
