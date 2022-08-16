@@ -20,6 +20,28 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2 #拉取你的最新代码
+      - name: 设置Python环境
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: 安装Python依赖
+        run: pip install -r requirements.txt
+
+      - name: 添加防火墙白名单
+        run: |
+          python3 scripts/firewall.py lighthouse add \
+                 --secret-id   ${{ secrets.TENCENT_SECRETID }}   \
+                 --secret-key  ${{ secrets.TENCENT_SECRETKEY }}  \
+                 --instance-id ${{ secrets.TENCENT_INSTANCEID }} \
+                 --region     ap-hongkong                        \
+                 --port       ${{ secrets.PORT }}                \
+                 --protocol   TCP                                \
+                 --source     CurrentIP                          \
+                 --action     ACCEPT                             \
+                 --description "$(echo -n Github Action: `git rev-parse --short HEAD`)"
+      
       - name: 使用 Node.js ${{ matrix.node-version }}开始搞事情
         uses: actions/setup-node@v2
         with:
@@ -38,3 +60,15 @@ jobs:
           password: ${{ secrets.PASSWORD }} #你的nginx服务器密码
           localDir: "dist" #你vue项目build好的文件的路径,每次服务器上会自动删除对应的文件夹后重新覆盖
           remoteDir: "/data1/web/" #你要把你build好的文件夹放到nginx服务器上的什么位置
+
+      - name: 删除防火墙白名单
+        run: |
+          python3 scripts/firewall.py lighthouse remove \
+                 --secret-id   ${{ secrets.TENCENT_SECRETID }}   \
+                 --secret-key  ${{ secrets.TENCENT_SECRETKEY }}  \
+                 --instance-id ${{ secrets.TENCENT_INSTANCEID }} \
+                 --region     ap-hongkong                        \
+                 --port       ${{ secrets.PORT }}                \
+                 --protocol   TCP                                \
+                 --action     ACCEPT                             \
+                 --description "$(echo -n Github Action: `git rev-parse --short HEAD`)"
