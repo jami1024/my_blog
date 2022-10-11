@@ -33,7 +33,12 @@ export default defineUserConfig({
           text: '基础',
           collapsible: true,
           children: ['/golang/basic/array', '/golang/basic/slice',  '/golang/basic/point','/golang/basic/func','/golang/basic/map','/golang/basic/struct','/golang/basic/copy','/golang/basic/make_and_new', '/golang/basic/method', '/golang/basic/goroutine'],
-        }
+        },
+        {
+            text: 'Gin',
+            collapsible: true,
+            children: ['/golang/gin/01'],
+          }
       ],
     },
     // // 默认主题配置
