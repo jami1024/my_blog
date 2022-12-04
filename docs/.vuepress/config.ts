@@ -37,7 +37,7 @@ export default defineUserConfig({
         {
             text: 'Gin',
             collapsible: true,
-            children: ['/golang/gin/01'],
+            children: ['/golang/gin/01', '/golang/gin/02', '/golang/gin/03', '/golang/gin/04'],
           }
       ],
     },
