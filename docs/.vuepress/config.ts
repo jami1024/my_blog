@@ -2,6 +2,7 @@
 import { defineUserConfig } from "vuepress";
 import { gungnirTheme, i18n } from "vuepress-theme-gungnir";
 import { navbar, sidebar } from "./configs";
+import rssPlugin from "@renovamen/vuepress-plugin-rss";
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -187,5 +188,14 @@ export default defineUserConfig({
     }
   },
 
-  plugins: []
+  plugins: [
+    rssPlugin({
+      siteURL: "https://gops.io", // site URL (required)
+      title: "Jami's blog", // site title (optional, default: `themeConfig.title`)
+      description: "A blog powered by VuePress and Gungnir", // site description (optional, default: "")
+      copyright: "Jami 2023-2023", // site copyright (optional, default: "")
+      count: 20, // number of posts to be generated (optional, default: 20)
+      filter: (page) => true // filter function to choose which posts to be generated (optional, default: (page) => true)
+    })
+  ]
 });
