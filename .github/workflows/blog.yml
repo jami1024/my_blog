@@ -53,6 +53,7 @@ jobs:
           cache: "npm"
       - run: npm install
       - name: "编译"
+        uses: actions/setup-node@v2
         env:
           NODE_OPTIONS: "--max_old_space_size=4096"
         with:
