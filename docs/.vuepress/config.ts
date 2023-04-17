@@ -190,7 +190,7 @@ export default defineUserConfig({
 
   plugins: [
     rssPlugin({
-      siteURL: "https://gops.io", // site URL (required)
+      siteURL: "https://gops.dev", // site URL (required)
       title: "Jami's blog", // site title (optional, default: `themeConfig.title`)
       description: "A blog powered by VuePress and Gungnir", // site description (optional, default: "")
       copyright: "Jami 2023-2023", // site copyright (optional, default: "")
