@@ -52,6 +52,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
         run: npm install
+      - name: "编译"
+        uses: actions/setup-node@v2
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
         run: npm run docs:build
       - name: 自动同步文件夹到我的服务器
         # You may pin to the exact commit or the version.
