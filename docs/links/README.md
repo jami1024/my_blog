@@ -11,6 +11,14 @@ links:
 
   - title: Other Versions
     items:
+      - sitename: DBA大佬
+        url: https://github.com/yuanbaopig
+        img: /img/links/jekyll.png
+        desc: DBA大佬
+      - sitename: 熊二
+        url: https://github.com/opsbear2
+        img: /img/links/jekyll.png
+        desc: 游戏公司运维大佬
       - sitename: VuePress 1
         url: https://vuepress-theme-gungnir.vercel.app
         img: /img/links/v1.svg
