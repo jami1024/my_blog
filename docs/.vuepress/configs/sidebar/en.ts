@@ -26,5 +26,11 @@ export const en: SidebarConfig = {
         "/docs/golang/gin/04.md"
       ]
     }
+  ],
+  "/docs/jksj/jksj-monitor/": [
+    {
+      text: "学习笔记",
+      children: ["/docs/jksj/jksj-monitor/01.md"]
+    }
   ]
 };
