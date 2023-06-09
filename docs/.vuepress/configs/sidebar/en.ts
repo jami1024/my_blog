@@ -29,7 +29,7 @@ export const en: SidebarConfig = {
   ],
   "/docs/jksj/jksj-monitor/": [
     {
-      text: "学习笔记",
+      text: "监控概述",
       children: ["/docs/jksj/jksj-monitor/01.md"]
     }
   ]
